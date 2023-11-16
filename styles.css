@@ -14,6 +14,9 @@
 
 body {
     background: var(--Dark-Blue, #202733);
+    display: flex;
+    align-items: center;
+    position: relative;
 }
 
 
@@ -22,7 +25,7 @@ body {
     display: flex;
     flex-direction: column;
     display: flex;
-    width: 540px;
+    width: 33.75rem;
     height: 332px;
     justify-content: center;
     align-items: center;
@@ -47,8 +50,9 @@ body {
     margin-left: 13px;
     margin-right: 18px;
     margin-bottom: 25px;
-    margin-top: 25px;
-
+    margin-top: 60px;
+    text-transform: uppercase; 
+    margin-top: -2em;
 }
 
 /* Quote */
@@ -92,36 +96,58 @@ body {
 }
 
 /* Dice */
+.circle {
+    height: 5em;
+    width: 5em;
+    background-color: var(--Neon-Green, #53FFAA);
+    border-radius: 50%;
+    position: absolute;
+    bottom: -2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #53FFAA;
+}
+
 .dice {
-    width: 64px;
-    height: 64px;
-    flex-shrink: 0;
-    padding-top: 3em;
+    width: 40%;
+    height: auto;
 }
 
-.hover-svg {
-    display: none;
-}
-
-.dice:hover .hover-svg {
-    display: inline-block;
-    position: fixed;
-}
-
-.dice:hover .default-svg {
-    display: none;
+/* Hover effect */
+.circle:hover .dice {
+    filter: brightness(100%) contrast(80%) saturate(190%);
 }
 
 /* Mobile */
 @media only screen and (max-width: 450px) {
+    *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
     .card {
         display: flex;
         width: 90%;
-        height: 315px;
+        height: 19.6875em;
         padding: 120px 16px 200px 16px;
         flex-direction: column;
         align-items: center;
-        
+    }
+
+    .card-heading {
+        color: var(--Neon-Green, #53FFAA);
+        text-align: center;
+        font-family: "Manrope";
+        font-size: 11px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: normal;
+        letter-spacing: 3.457px;
+        margin-right: 15px;
+        margin-left: 11px;
+        margin-top: 4em;
     }
 
     .quote {
@@ -134,10 +160,14 @@ body {
         font-weight: 800;
         line-height: normal;
         letter-spacing: -0.257px;
+        padding-right: 33px;
+        padding-left: 25px;
+        height: 132px;
     }
-
     .pause {
         flex-direction: row;
+        margin-top: 8px;
+        margin-bottom: 7px;
     }
 
     .pause hr {
@@ -145,9 +175,20 @@ body {
         height: 1px;
         flex-shrink: 0;
         background: var(--Grayish-Blue, #4F5D74);
+
     }
 
-    .pause.svg {
-        padding-top: 3em;
+    .circle {
+        height: fit-content;
+        padding: 5em;
+        width: 5em;
+        padding: 18px;
+        background-color: var(--Neon-Green, #53FFAA);
+        border-radius: 50%;
+        bottom: -2rem;
+    }
+
+    .dice {
+        width: 90%;
     }
 }
