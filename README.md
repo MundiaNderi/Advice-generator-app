@@ -4,7 +4,7 @@
 
 ## The challenge
 
-To build out this advice generator app using the [Advice Slip API](https://api.adviceslip.com) and get it looking as close to the design as possible.
+Was to build out this advice generator app using the [Advice Slip API](https://api.adviceslip.com) and get it looking as close to the design as possible.
 
 Users should be able to:
 
@@ -12,8 +12,6 @@ Users should be able to:
 - See hover states for all interactive elements on the page
 - Generate a new piece of advice by clicking the dice icon
 
-Want some support on the challenge? [Join our community](https://www.frontendmentor.io/community) and ask questions in the **#help** channel.
-
-## Deployed your project
+## Deployed project
 
 The website is hosted on netlify: https://heroic-starlight-3cb0b0.netlify.app
